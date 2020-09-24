@@ -25,17 +25,12 @@
         left: 30px;
         top: 115px;
     }
-    .contact {
+    .contact[data-v-4cb868ea] {
         margin-top: 44px;
         margin-right: -220px;
         margin-left: 0px;
     }
-    .contact {
-        margin-top: 44px;
-        margin-right: -220px;
-        margin-left: 0px;
-    }
-    .our-partner {
+    .our-partner[data-v-4cb868ea] {
         width: 156px;
         height: 100px;
         border-radius: 0px 0px 0px 0px;
@@ -43,16 +38,7 @@
         font-size: 20px;
         top: 150px;
     }
-
-    .our-partner {
-        width: 156px;
-        height: 100px;
-        border-radius: 0px 0px 0px 0px;
-        font-weight: bold;
-        font-size: 20px;
-        top: 150px;
-    }
-    .need-help {
+    .need-help[data-v-4cb868ea] {
         width: 156px;
         height: 100px;
         font-size: 20px;
@@ -60,25 +46,25 @@
         top: 150px;
         margin-left: 10px;
     }
-    p.text-our-partner {
+    p.text-our-partner[data-v-4cb868ea] {
         margin-left: 30px;
         margin-top: 20px;
     }
-    p.info-narindo {
+    p.info-narindo[data-v-4cb868ea] {
         margin-left: 30px;
     }
-    p.text-need-help {
+    p.text-need-help[data-v-4cb868ea] {
         margin-left: 30px;
         margin-top: 20px;
     }
-    p.info-need-help {
+    p.info-need-help[data-v-4cb868ea] {
         margin-left: 30px;
     }
     .section-padding-generals {
         background-color: rgb(171, 18, 28);
         height: 120px;
     }
-    .header {
+    .header[data-v-4cb868ea] {
         font-weight: bold;
         font-size: 28px;
         line-height: 36px;
@@ -87,7 +73,7 @@
         color: #ffffff;
         margin-top: -20px;
     }
-    .sub-header {
+    .sub-header[data-v-4cb868ea] {
         font-weight: 500;
         font-size: 14px;
         line-height: 18px;
@@ -96,7 +82,7 @@
         color: #ffffff;
         margin-top: -20px;
     }
-    .title-header {
+    .title-header[data-v-4cb868ea] {
         margin-top: 70px;
         width: 408px;
         height: 163px;
@@ -109,13 +95,13 @@
         color: #000000;
         margin-left: 50px;
     }
-    img.logo {
+    img.logo[data-v-4cb868ea] {
         width: 434.65px;
         height: 260px;
         display: block;
         margin: auto;
     }
-    .article-header {
+    .article-header[data-v-4cb868ea] {
         margin-top: 20px;
         font-weight: 500;
         font-size: 18px;
@@ -124,7 +110,7 @@
         letter-spacing: -0.015em;
         margin-bottom: 40px;
     }
-    .partner-header {
+    .partner-header[data-v-4cb868ea] {
         font-style: normal;
         font-weight: bold;
         font-size: 28px;
@@ -133,7 +119,7 @@
         letter-spacing: -0.03em;
         color: #000000;
     }
-    .menu-product {
+    .menu-product[data-v-4cb868ea] {
         width: 18%;
         margin-right: 10px;
         background: #ffffff;
@@ -146,7 +132,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .menu-product:hover {
+    .menu-product[data-v-4cb868ea]:hover {
         width: 18%;
         margin-right: 10px;
         background: #ab121c;
@@ -159,13 +145,13 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .menu-product:active {
+    .menu-product[data-v-4cb868ea]:active {
         display: none;
     }
     .tab-content {
         display: none;
     }
-    .title-header {
+    .title-header[data-v-5e76a84e] {
         font-family: Poppins;
         font-size: 28px;
         font-style: normal;
@@ -182,7 +168,7 @@
         color: #000000;
         margin-left: -11em;
     }
-    .vue-map-container {
+    .vue-map-container[data-v-5e76a84e] {
         height: 300px;
         width: 100%;
     }
@@ -210,26 +196,26 @@
         text-align: left;
         margin-left: 40px;
     }
-    img.banner {
+    img.banner[data-v-4cb868ea] {
         display: none;
     }
     .d-block {
         margin-left: 70px;
     }
-    .navbar-nav {
+    .navbar-nav[data-v-ed558de2] {
         flex-direction: column;
     }
-    .nav-link {
+    .nav-link[data-v-ed558de2] {
         padding-right: 0.5rem !important;
         padding-left: 0.5rem !important;
         text-align: left;
         margin-left: 0px;
     }
 
-    .navbar-nav {
+    .navbar-nav[data-v-191dce1e] {
         flex-direction: column !important;
     }
-    .nav-link {
+    .nav-link[data-v-191dce1e] {
         padding-right: 0.5rem !important;
         padding-left: 0.5rem !important;
         text-align: left;
@@ -239,10 +225,6 @@
         display: none;
     }
     .translate-2 {
-        margin-left: 24em;
-        margin-right: 0px;
-    }
-    coba {
         margin-left: 24em;
         margin-right: 0px;
     }

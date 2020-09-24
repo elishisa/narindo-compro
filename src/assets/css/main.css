@@ -30,14 +30,14 @@ ul > .navbar {
     text-align: center;
     letter-spacing: -0.015em;
 }
-img.flag-1-indo {
+img.flag-1-indo[data-v-191dce1e] {
     position: absolute;
     width: 20px;
     height: 20px;
     left: -20px;
     top: 11px;
 }
-img.flag-1-indo {
+img.flag-1-indo[data-v-ed558de2] {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -127,7 +127,7 @@ a.nav-link:hover {
 .translate-2 {
     display: none;
 }
-.coba {
+.translate-3 {
     display: none;
 }
 #footer-content {
