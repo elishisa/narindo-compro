@@ -341,6 +341,7 @@
             id="carouselExampleIndicators"
             class="carousel slide"
             data-ride="carousel"
+            style="height: 600px"
           >
             <ol class="carousel-indicators">
               <li
