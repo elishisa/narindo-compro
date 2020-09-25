@@ -99,6 +99,7 @@
             <li class="nav-item dropdown translate">
               <img
                 class="flag-1-indo"
+                style="left: -20px; top: 10px; width: 25px; height: 25px"
                 src="../../assets/ic_flag_england@2x.png"
               />
               <a
