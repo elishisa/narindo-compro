@@ -2,19 +2,31 @@
   <section>
     <section id="Home" class="section-general">
       <div class="container">
-        <div class="title">
-          Agregator Pembayaran Tagihan Pertama di Indonesia
-        </div>
+        <div class="title">Agregator Pembayaran Tagihan Pertama Indonesia</div>
       </div>
+      <Lottie
+        :options="defaultOptions"
+        :height="36"
+        :width="36"
+        style="margin-left: 6em"
+      />
       <div class="row contact">
-        <div class="our-partner col-sm-5">
+        <div
+          class="our-partner col-sm-5"
+          @click="linktoemail()"
+          style="cursor: pointer"
+        >
           <p class="text-our-partner">Jadilah Mitra Kami!</p>
           <p class="info-narindo">
             <img src="../../assets/ic_email_black.png" />
             Info@narindo.com
           </p>
         </div>
-        <div class="need-help col-sm-5">
+        <div
+          class="need-help col-sm-5"
+          @click="linktowa()"
+          style="cursor: pointer"
+        >
           <p class="text-need-help">Butuh Bantuan?</p>
           <p class="info-need-help">
             <img src="../../assets/ic_headphones.png" />
@@ -133,7 +145,7 @@
           </div>
           <div class="col-lg-5">
             <div class="tab-content">
-              <div id="menu1" class="tab-pane fade in active">
+              <div id="menu1" class="tab-pane fade in hover">
                 <div class="row">
                   <div class="col-sm-4">
                     <img src="../../assets/--BPJS_2.png" />
@@ -222,7 +234,7 @@
         </div>
         <div class="col-sm-12">
           <ul class="nav nav-pills">
-            <li class="menu-product active">
+            <li class="menu-product hover">
               <a data-toggle="pill" href="#home">
                 <div class="col-lg-12">
                   <h3 class="number">01</h3>
@@ -341,7 +353,7 @@
           <div
             id="carouselExampleIndicators"
             class="carousel slide"
-            data-ride="carousel"
+            data-interval="false"
           >
             <ol class="carousel-indicators">
               <li
@@ -353,158 +365,192 @@
                 data-target="#carouselExampleIndicators"
                 data-slide-to="1"
               ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="3"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="4"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="5"
-              ></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_API.png"
-                      alt="First slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">INTEGRASI API</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Kami mengintegrasikan mitra, provider, biller, dan
-                        agregator melalui API yang tersentralisasi.
-                      </p>
-                    </div>
-                  </div>
+                <div class="col-sm-12">
+                  <ul class="nav nav-pills">
+                    <li
+                      class="menu-technology hover"
+                      style="width: 300px; margin-left: 100px"
+                    >
+                      <a data-toggle="pill" href="#home">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_API.png"
+                            alt="First slide"
+                            style="margin-left: -10px; height: 135px"
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">API Integration</h3>
+                        </div>
+
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Layanan isi ulang pulsa dan paket data secara instan
+                            dari Seluruh Operator Indonesia dengan nominal
+                            beragam.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="menu-technology" style="width: 300px">
+                      <a data-toggle="pill" href="#menu1">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_web_transaction.png"
+                            alt="Second slide"
+                            style="
+                              width: 200px;
+                              height: 136px;
+                              padding-left: 30px;
+                              margin-left: -25px;
+                            "
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">Web Transaction</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p>
+                            Sistem pembayaran tagihan untuk PLN, PDAM, BPJS,
+                            TELKOM, dan mendukung bisnis anda dalam
+                            mempersingkat proses pembayaran pelanggan.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="menu-technology"
+                      style="width: 300px; margin-left: 0px"
+                    >
+                      <a data-toggle="pill" href="#menu2">
+                        <img
+                          class="d-block img-product"
+                          src="../../assets/comp_illustration_nabila_apps.png"
+                          alt="Third slide"
+                          style="
+                            padding-left: 30px;
+                            margin-left: -25px;
+                            width: 200px;
+                            height: 136px;
+                          "
+                        />
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">Nabila</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p>
+                            Penyedia isi ulang multi e-money kapan saja, di mana
+                            saja dan proses yang singkat langsung sampai ke
+                            nomor tujuan.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_web_transaction.png"
-                      alt="Second slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">Web Transaction</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Anda dapat mengelola dan memantau transaksi bisnis Anda
-                        dengan Dasbor berbasis web yang inovatif dan efektif.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_nabila_apps.png"
-                      alt="Third slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">Nabila</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Kami menyediakan aplikasi andriod yang dapat Anda
-                        gunakan untuk semua pembayaran digital seperti Pulsa,
-                        PLN, BPJS dan lainnya.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_microsite.png"
-                      alt="Third slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">Microsite</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Anda dapat memenuhi kebutuhan pelanggan dengan
-                        Microsites yang dirancang untuk mendukung transaksi
-                        pembayaran digital.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_officialstore.png"
-                      alt="Third slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">Official Store</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Kami membantu mengelola official store Provider dalam
-                        menjual produknya secara online melalui situs
-                        e-commerce.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_e-cluster.png"
-                      alt="Third slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">E-Cluster</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Kami mengelola operasional 23.000 outlet di 11 cluster
-                        di Indonesia dengan mudah melalui satu sistem yang
-                        tersentralisasi.
-                      </p>
-                    </div>
-                  </div>
+                <div class="col-sm-12">
+                  <ul class="nav nav-pills">
+                    <li
+                      class="menu-technology hover"
+                      style="width: 300px; margin-left: 100px"
+                    >
+                      <a data-toggle="pill" href="#home">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_microsite.png"
+                            alt="Third slide"
+                            style="
+                              padding-left: 30px;
+                              margin-left: -25px;
+                              width: 200px;
+                              height: 136px;
+                            "
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">Microsite</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Layanan isi ulang pulsa dan paket data secara instan
+                            dari Seluruh Operator Indonesia dengan nominal
+                            beragam.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="menu-technology" style="width: 300px">
+                      <a data-toggle="pill" href="#menu1">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_officialstore.png"
+                            alt="Third slide"
+                            style="
+                              padding-left: 30px;
+                              margin-left: -25px;
+                              width: 200px;
+                              height: 136px;
+                            "
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">Official Store</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Sistem pembayaran tagihan untuk PLN, PDAM, BPJS,
+                            TELKOM, dan mendukung bisnis anda dalam
+                            mempersingkat proses pembayaran pelanggan.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="menu-technology"
+                      style="width: 300px; margin-left: 0px"
+                    >
+                      <a data-toggle="pill" href="#menu2">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_e-cluster.png"
+                            alt="Third slide"
+                            style="
+                              padding-left: 30px;
+                              margin-left: -25px;
+                              width: 200px;
+                              height: 136px;
+                            "
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">E-Cluster</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p p style="width: 300px">
+                            Penyedia isi ulang multi e-money kapan saja, di mana
+                            saja dan proses yang singkat langsung sampai ke
+                            nomor tujuan.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -556,7 +602,7 @@
               <div
                 id="carouselExampleIndicators2"
                 class="carousel slide"
-                data-ride="carousel"
+                data-interval="false"
               >
                 <ol class="carousel-indicators">
                   <li
@@ -964,6 +1010,7 @@
                   href="#carouselExampleIndicators2"
                   role="button"
                   data-slide="prev"
+                  style="margin-left: -60px"
                 >
                   <span
                     class="carousel-control-prev-icon"
@@ -976,6 +1023,7 @@
                   href="#carouselExampleIndicators2"
                   role="button"
                   data-slide="next"
+                  style="margin-left: 70px"
                 >
                   <span
                     class="carousel-control-next-icon"
@@ -1038,10 +1086,19 @@
 </template>
 
 <script>
+import * as animationData from "../../assets/scroll-icon.json";
+import Lottie from "vue-lottie/src/lottie.vue";
+
 export default {
+  components: {
+    Lottie,
+  },
   data() {
     return {
       id: null,
+      defaultOptions: {
+        animationData: animationData.default,
+      },
     };
   },
   props: ["id_active"],
@@ -1063,10 +1120,21 @@ export default {
         window.scrollTo({ top: 2700, behavior: "smooth" });
       } else if (this.id === "contact") {
         window.scrollTo({ top: 3300, behavior: "smooth" });
+      } else if (this.id === "homepage") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     },
   },
   methods: {
+    linktowa() {
+      window.open(
+        " https://api.whatsapp.com/send?phone=6281806500100",
+        "_blank"
+      );
+    },
+    linktoemail() {
+      window.open("mailto:info@narindo.com");
+    },
     nextSlide() {
       this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
     },
@@ -1099,6 +1167,9 @@ export default {
 .providers {
   width: 95px;
   height: 80px;
+}
+.title {
+  font-size: 75px;
 }
 .title-card {
   margin-top: 0px;
@@ -1194,6 +1265,25 @@ a:active {
   border-radius: 14px;
 }
 
+.menu-technology {
+  margin-right: 10px;
+  background: #f5f5f5;
+  border-radius: 14px;
+  height: 369px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  border-radius: 14px;
+}
+
+.menu-technology > a:hover {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+}
+
 .menu-product:active {
   background: #ab121c;
   color: #fff;
@@ -1210,7 +1300,7 @@ a:active {
   border-radius: 14px;
 }
 .contact {
-  margin-top: 45px;
+  margin-top: 9px;
   margin-right: -236px;
   margin-left: 500px;
 }
@@ -1228,7 +1318,7 @@ a:active {
 }
 
 .need-help {
-  width: 468px;
+  width: 100%;
   height: 161px;
   background: #990e17;
   font-weight: bold;

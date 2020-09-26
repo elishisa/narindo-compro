@@ -40,6 +40,7 @@
           </p>
           <div class="mb-4">
             <p
+              @click="linktowa()"
               style="
                 font-family: Poppins;
                 font-size: 18px;
@@ -49,6 +50,7 @@
                 letter-spacing: 0em;
                 text-align: left;
                 margin-bottom: 0px;
+                cursor: pointer;
               "
             >
               <img src="../../assets/ic_handphone_black.png" />&nbsp;&nbsp;
@@ -70,6 +72,7 @@
               (+62)2129450989
             </p>
             <p
+              @click="linktoemail()"
               style="
                 font-family: Poppins;
                 font-size: 18px;
@@ -79,6 +82,7 @@
                 letter-spacing: 0em;
                 text-align: left;
                 margin-top: 0px;
+                cursor: pointer;
               "
             >
               <img
@@ -140,6 +144,15 @@ export default {
     this.geolocate();
   },
   methods: {
+    linktowa() {
+      window.open(
+        " https://api.whatsapp.com/send?phone=6281806500100",
+        "_blank"
+      );
+    },
+    linktoemail() {
+      window.open("mailto:info@narindo.com");
+    },
     // receives a place object via the autocomplete component
     setPlace(place) {
       this.currentPlace = place;

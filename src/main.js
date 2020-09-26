@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueCarousel from 'vue-carousel';
 import * as VueGoogleMaps from "vue2-google-maps";
+import Lottie from "vue-lottie/src/lottie.vue";
+
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -20,6 +22,7 @@ Vue.use(VueGoogleMaps, {
 });
 Vue.use(VueCarousel)
 Vue.use(BootstrapVue)
+Vue.use(Lottie)
 
 
 Vue.config.productionTip = false

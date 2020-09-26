@@ -4,15 +4,29 @@
       <div class="container">
         <div class="title">1ST AGGREGATOR ONLINE BILL PAYMENT INDONESIA</div>
       </div>
+      <Lottie
+        :options="defaultOptions"
+        :height="36"
+        :width="36"
+        style="margin-left: 6em"
+      />
       <div class="row contact">
-        <div class="our-partner col-sm-5">
+        <div
+          class="our-partner col-sm-5"
+          @click="linktoemail()"
+          style="cursor: pointer"
+        >
           <p class="text-our-partner">Be Our Partner!</p>
           <p class="info-narindo">
             <img src="../../assets/ic_email_black.png" />
             Info@narindo.com
           </p>
         </div>
-        <div class="need-help col-sm-5">
+        <div
+          class="need-help col-sm-5"
+          @click="linktowa()"
+          style="cursor: pointer"
+        >
           <p class="text-need-help">Need help?</p>
           <p class="info-need-help">
             <img src="../../assets/ic_headphones.png" />
@@ -130,98 +144,122 @@
             </p>
           </div>
           <div class="col-lg-5">
-            <div class="tab-content">
-              <div id="menu1" class="tab-pane fade in active">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/--BPJS_2.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--listrik_2.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--PDAM_2.png" />
-                  </div>
+            <div v-if="hover" id="menu-2" class="menu-1">
+              <div class="row">
+                <div class="col-sm-4 mb-4">
+                  <img
+                    src="../../assets/--BPJS_2.png"
+                    style="width: 50px; height: 50px"
+                  />
                 </div>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/--pulsa_2.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--Paket Data_2.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--TV_kable 2.png" />
-                  </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--listrik_2.png"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--PDAM_2.png"
+                    style="width: 50px; height: 50px"
+                  />
                 </div>
               </div>
-              <div id="home" class="tab-pane fade">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_xl.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo telkomsel 1 1.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_indosat.png" />
-                  </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--pulsa_2.png"
+                    style="width: 50px; height: 50px"
+                  />
                 </div>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_axis.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_black.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_smartfren_black.png" />
-                  </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--Paket Data_2.png"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--TV_kable 2.png"
+                    style="width: 50px; height: 50px"
+                  />
                 </div>
               </div>
-              <div id="menu2" class="tab-pane fade">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/__logo_dana.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--logo_ovo.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo-gopay (2).png" />
-                  </div>
+            </div>
+            <div v-if="hover1" id="menu-2" class="menu-2">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_xl.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo telkomsel 1 1.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_indosat.png" />
                 </div>
               </div>
-              <div id="menu3" class="tab-pane fade">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/__google_play.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo-grab.png" />
-                  </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_axis.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_black.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_smartfren_black.png" />
                 </div>
               </div>
-              <div id="menu4" class="tab-pane fade">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/__logo_grab_gift.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--logo_tokopedia.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_traveloka.png" />
-                  </div>
+            </div>
+            <div v-if="hover2" class="menu-3">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/__logo_dana.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/--logo_ovo.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo-gopay (2).png" />
+                </div>
+              </div>
+            </div>
+            <div v-if="hover3" class="menu-4">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/__google_play.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/logo-grab.png"
+                    style="width: 110px; height: 40px"
+                  />
+                </div>
+              </div>
+            </div>
+            <div v-if="hover4" class="menu-5">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/__logo_grab_gift.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/--logo_tokopedia.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_traveloka.png" />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-sm-12">
-          <ul class="nav nav-pills">
-            <li class="menu-product active">
-              <a data-toggle="pill" href="#home">
+          <ul class="nav">
+            <li
+              id="menu-product"
+              class="menu-product"
+              @mouseover="hover = true"
+              @mouseleave="hover = false"
+            >
+              <a class="mobile">
                 <div class="col-lg-12">
                   <h3 class="number">01</h3>
                 </div>
@@ -239,8 +277,12 @@
                 </div>
               </a>
             </li>
-            <li class="menu-product">
-              <a data-toggle="pill" href="#menu1">
+            <li
+              class="menu-product"
+              @mouseover="hover1 = true"
+              @mouseleave="hover1 = false"
+            >
+              <a class="multibiller">
                 <div class="col-lg-12">
                   <h3 class="number">02</h3>
                 </div>
@@ -258,8 +300,12 @@
                 </div>
               </a>
             </li>
-            <li class="menu-product">
-              <a data-toggle="pill" href="#menu2">
+            <li
+              class="menu-product"
+              @mouseover="hover2 = true"
+              @mouseleave="hover2 = false"
+            >
+              <a class="emoney">
                 <div class="col-lg-12">
                   <h3 class="number">03</h3>
                 </div>
@@ -278,8 +324,12 @@
                 </div>
               </a>
             </li>
-            <li class="menu-product">
-              <a data-toggle="pill" href="#menu3">
+            <li
+              class="menu-product"
+              @mouseover="hover3 = true"
+              @mouseleave="hover3 = false"
+            >
+              <a class="evoucher">
                 <div class="col-lg-12">
                   <h3 class="number">04</h3>
                 </div>
@@ -298,8 +348,12 @@
                 </div>
               </a>
             </li>
-            <li class="menu-product">
-              <a data-toggle="pill" href="#menu4">
+            <li
+              class="menu-product"
+              @mouseover="hover4 = true"
+              @mouseleave="hover4 = false"
+            >
+              <a class="gift-card">
                 <div class="col-lg-12">
                   <h3 class="number">05</h3>
                 </div>
@@ -340,8 +394,8 @@
           <div
             id="carouselExampleIndicators"
             class="carousel slide"
-            data-ride="carousel"
-            style="height: 600px"
+            data-interval="false"
+            style="height: 400px"
           >
             <ol class="carousel-indicators">
               <li
@@ -353,157 +407,170 @@
                 data-target="#carouselExampleIndicators"
                 data-slide-to="1"
               ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="3"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="4"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="5"
-              ></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_API.png"
-                      alt="First slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">API INTEGRATION</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Integrate partners, providers, billers and aggregators
-                        via one central API
-                      </p>
-                    </div>
-                  </div>
+                <div class="col-sm-12">
+                  <ul
+                    class="nav nav-pills"
+                    style="padding-left: 13em; background-color: #f5f5f5"
+                  >
+                    <li
+                      class="menu-technology"
+                      style="width: 300px; margin-left: -130px"
+                    >
+                      <a data-toggle="pill" href="#home">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_API.png"
+                            alt="First slide"
+                            style="padding-left: 30px; margin-left: -25px"
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">API Integration</h3>
+                        </div>
+
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Integrate partners, providers, billers and
+                            aggregators via one central API
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="menu-technology" style="width: 300px">
+                      <a data-toggle="pill" href="#menu1">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_web_transaction.png"
+                            alt="Second slide"
+                            style="padding-left: 30px; margin-left: -25px"
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">Web Transaction</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Maintain and monitor transaction with innovative and
+                            effective Web base dashboard.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="menu-technology"
+                      style="width: 300px; margin-left: 0px"
+                    >
+                      <a data-toggle="pill" href="#menu2">
+                        <img
+                          class="d-block img-product"
+                          src="../../assets/comp_illustration_nabila_apps.png"
+                          alt="Third slide"
+                          style="
+                            padding-left: 30px;
+                            margin-left: -25px;
+                            width: 200px;
+                            height: 136px;
+                          "
+                        />
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">Nabila</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Mobile base payment application in Android provides
+                            all transacted products which are supported by
+                            Narindo within one application.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_web_transaction.png"
-                      alt="Second slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">Web Transaction</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Maintain and monitor transaction with innovative and
-                        effective Web base dashboard.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_nabila_apps.png"
-                      alt="Third slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">Nabila</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Mobile base payment application in Android provides all
-                        transacted products which are supported by Narindo
-                        within one application.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_microsite.png"
-                      alt="Third slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">Microsite</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Experience smart way to provide your customer needs with
-                        Microsites designed to support payment transaction as a
-                        unified digital property.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_officialstore.png"
-                      alt="Third slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">Official Store</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Special space provided for official brands or legitimate
-                        brand rights holders to sell their products online
-                        through e-commerce websites and maintained by Narindo.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <img
-                      class="d-block"
-                      src="../../assets/comp_illustration_e-cluster.png"
-                      alt="Third slide"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-sm-12">
-                    <div class="row">
-                      <h3 class="text-partner">E-Cluster</h3>
-                    </div>
-                    <div class="row">
-                      <p class="text-partner-sub">
-                        Easily maintain the operations of 23,000 outlets in 11
-                        clusters in Indonesia wit one centralize system.
-                      </p>
-                    </div>
-                  </div>
+                <div class="col-sm-12">
+                  <ul class="nav nav-pills" style="padding-left: 13em">
+                    <li
+                      class="menu-technology hover"
+                      style="width: 300px; margin-left: -120px"
+                    >
+                      <a data-toggle="pill" href="#home">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_microsite.png"
+                            alt="Third slide"
+                            style="padding-left: 30px; margin-left: -25px"
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">Microsite</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Experience smart way to provide your customer needs
+                            with Microsites designed to support payment
+                            transaction as a unified digital property.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="menu-technology" style="width: 300px">
+                      <a data-toggle="pill" href="#menu1">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_officialstore.png"
+                            alt="Third slide"
+                            style="padding-left: 30px; margin-left: -25px"
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">Official Store</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Special space provided for official brands or
+                            legitimate brand rights holders to sell their
+                            products online through e-commerce websites and
+                            maintained by Narindo.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="menu-technology" style="width: 300px">
+                      <a data-toggle="pill" href="#menu2">
+                        <div class="col-lg-12">
+                          <img
+                            class="d-block img-product"
+                            src="../../assets/comp_illustration_e-cluster.png"
+                            alt="Third slide"
+                            style="padding-left: 30px; margin-left: -25px"
+                          />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <h3 class="title-card">E-Cluster</h3>
+                        </div>
+                        <div class="col-lg-12">
+                          <p style="width: 300px">
+                            Easily maintain the operations of 23,000 outlets in
+                            11 clusters in Indonesia wit one centralize system.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -512,6 +579,7 @@
               href="#carouselExampleIndicators"
               role="button"
               data-slide="prev"
+              style="margin-top: -50px"
             >
               <span
                 class="carousel-control-prev-icon"
@@ -524,6 +592,7 @@
               href="#carouselExampleIndicators"
               role="button"
               data-slide="next"
+              style="margin-top: -50px"
             >
               <span
                 class="carousel-control-next-icon"
@@ -547,7 +616,13 @@
             <p class="partner-header">
               We collaborate with magnificent partners and providers.
             </p>
-            <button class="work-with-us">Work with us!</button>
+            <button
+              class="work-with-us"
+              @click="linktoemail()"
+              style="cursor: pointer"
+            >
+              Work with us!
+            </button>
           </div>
           <div class="col-lg-6">
             <p class="text-partner">Partners</p>
@@ -555,7 +630,7 @@
               <div
                 id="carouselExampleIndicators2"
                 class="carousel slide"
-                data-ride="carousel"
+                data-interval="false"
               >
                 <ol class="carousel-indicators">
                   <li
@@ -1037,10 +1112,24 @@
 </template>
 
 <script>
+import * as animationData from "../../assets/scroll-icon.json";
+import Lottie from "vue-lottie/src/lottie.vue";
+
 export default {
+  components: {
+    Lottie,
+  },
   data() {
     return {
+      hover: false,
+      hover1: false,
+      hover2: false,
+      hover3: false,
+      hover4: false,
       id: null,
+      defaultOptions: {
+        animationData: animationData.default,
+      },
     };
   },
   props: ["id_active"],
@@ -1060,10 +1149,21 @@ export default {
         window.scrollTo({ top: 2700, behavior: "smooth" });
       } else if (this.id === "contact") {
         window.scrollTo({ top: 3300, behavior: "smooth" });
+      } else if (this.id === "homepage") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     },
   },
   methods: {
+    linktowa() {
+      window.open(
+        " https://api.whatsapp.com/send?phone=6281806500100",
+        "_blank"
+      );
+    },
+    linktoemail() {
+      window.open("mailto:info@narindo.com");
+    },
     nextSlide() {
       this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
     },
@@ -1075,6 +1175,13 @@ export default {
 </script>
 
 <style scoped>
+.home,
+.menu1,
+.menu2,
+.menu3,
+.menu4 {
+  display: none;
+}
 .text-partner {
   font-family: Poppins;
   font-size: 24px;
@@ -1096,6 +1203,12 @@ export default {
 .providers {
   width: 95px;
   height: 80px;
+}
+
+.img-product {
+  width: 200px;
+  height: 100%;
+  margin-left: 50px;
 }
 .title-card {
   margin-top: 0px;
@@ -1159,6 +1272,8 @@ a {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.015em;
+  margin-left: -60px;
+  margin-right: -50px;
 }
 a:hover {
   color: #fff;
@@ -1167,6 +1282,7 @@ a:hover {
   letter-spacing: -0.015em;
   text-decoration: none;
 }
+
 a:active {
   color: #fff;
   border-bottom: none;
@@ -1179,10 +1295,10 @@ a:active {
   margin-left: 0;
   margin-right: 0;
 }
-.menu-product {
-  width: 18%;
+
+.menu-technology {
   margin-right: 10px;
-  background: #ffffff;
+  background: #f5f5f5;
   border-radius: 14px;
   height: 369px;
   width: 200px;
@@ -1191,23 +1307,16 @@ a:active {
   border-radius: 14px;
 }
 
-.menu-product:active {
-  background: #ab121c;
-  color: #fff;
+.menu-technology > a:hover {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  text-decoration: none;
 }
-.menu-product:hover {
-  width: 18%;
-  margin-right: 10px;
-  background: #ab121c;
-  color: #fff;
-  height: 369px;
-  width: 200px;
-  left: 0px;
-  top: 0px;
-  border-radius: 14px;
-}
+
 .contact {
-  margin-top: 45px;
+  margin-top: 9px;
   margin-right: -236px;
   margin-left: 500px;
 }
@@ -1225,7 +1334,7 @@ a:active {
 }
 
 .need-help {
-  width: 468px;
+  width: 100%;
   height: 161px;
   background: #990e17;
   font-weight: bold;

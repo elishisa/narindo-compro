@@ -2,7 +2,11 @@
   <div class="div">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <img alt="logo-app" src="../../assets/ic_logo_.png" />
+        <img
+          alt="logo-app"
+          @click="homepage('homepage')"
+          src="../../assets/ic_logo_.png"
+        />
         <div class="nav-item dropdown translate-2">
           <img class="flag-1-indo" src="../../assets/ic_flag_indonesia.png" />
           <a
@@ -160,6 +164,16 @@ export default {
     this.contactActive = false;
   },
   methods: {
+    homepage(e) {
+      this.homeActive = true;
+      this.aboutActive = false;
+      this.productActive = false;
+      this.technologyActive = false;
+      this.clientActive = false;
+      this.contactActive = false;
+      this.scrollPosition = e;
+      this.$emit("child-checkbox", this.scrollPosition);
+    },
     homeBtn(e) {
       this.homeActive = true;
       this.aboutActive = false;
