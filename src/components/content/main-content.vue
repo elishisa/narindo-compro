@@ -144,98 +144,122 @@
             </p>
           </div>
           <div class="col-lg-5">
-            <div class="tab-content">
-              <div id="menu1" class="tab-pane fade in hover">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/--BPJS_2.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--listrik_2.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--PDAM_2.png" />
-                  </div>
+            <div v-if="hover" id="menu-2" class="menu-1">
+              <div class="row">
+                <div class="col-sm-4 mb-4">
+                  <img
+                    src="../../assets/--BPJS_2.png"
+                    style="width: 50px; height: 50px"
+                  />
                 </div>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/--pulsa_2.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--Paket Data_2.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--TV_kable 2.png" />
-                  </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--listrik_2.png"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--PDAM_2.png"
+                    style="width: 50px; height: 50px"
+                  />
                 </div>
               </div>
-              <div id="home" class="tab-pane fade">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_xl.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo telkomsel 1 1.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_indosat.png" />
-                  </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--pulsa_2.png"
+                    style="width: 50px; height: 50px"
+                  />
                 </div>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_axis.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_black.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_smartfren_black.png" />
-                  </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--Paket Data_2.png"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/--TV_kable 2.png"
+                    style="width: 50px; height: 50px"
+                  />
                 </div>
               </div>
-              <div id="menu2" class="tab-pane fade">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/__logo_dana.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--logo_ovo.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo-gopay (2).png" />
-                  </div>
+            </div>
+            <div v-if="hover1" id="menu-2" class="menu-2">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_xl.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo telkomsel 1 1.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_indosat.png" />
                 </div>
               </div>
-              <div id="menu3" class="tab-pane fade">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/__google_play.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo-grab.png" />
-                  </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_axis.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_black.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_smartfren_black.png" />
                 </div>
               </div>
-              <div id="menu4" class="tab-pane fade">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <img src="../../assets/__logo_grab_gift.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/--logo_tokopedia.png" />
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="../../assets/logo_traveloka.png" />
-                  </div>
+            </div>
+            <div v-if="hover2" class="menu-3">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/__logo_dana.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/--logo_ovo.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo-gopay (2).png" />
+                </div>
+              </div>
+            </div>
+            <div v-if="hover3" class="menu-4">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/__google_play.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img
+                    src="../../assets/logo-grab.png"
+                    style="width: 110px; height: 40px"
+                  />
+                </div>
+              </div>
+            </div>
+            <div v-if="hover4" class="menu-5">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="../../assets/__logo_grab_gift.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/--logo_tokopedia.png" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="../../assets/logo_traveloka.png" />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-sm-12">
-          <ul class="nav nav-pills">
-            <li class="menu-product hover">
-              <a data-toggle="pill" href="#home">
+          <ul class="nav">
+            <li
+              id="menu-product"
+              class="menu-product"
+              @mouseover="hover = true"
+              @mouseleave="hover = false"
+            >
+              <a class="mobile">
                 <div class="col-lg-12">
                   <h3 class="number">01</h3>
                 </div>
@@ -253,8 +277,12 @@
                 </div>
               </a>
             </li>
-            <li class="menu-product">
-              <a data-toggle="pill" href="#menu1">
+            <li
+              class="menu-product"
+              @mouseover="hover1 = true"
+              @mouseleave="hover1 = false"
+            >
+              <a class="multibiller">
                 <div class="col-lg-12">
                   <h3 class="number">02</h3>
                 </div>
@@ -273,8 +301,12 @@
                 </div>
               </a>
             </li>
-            <li class="menu-product">
-              <a data-toggle="pill" href="#menu2">
+            <li
+              class="menu-product"
+              @mouseover="hover2 = true"
+              @mouseleave="hover2 = false"
+            >
+              <a class="emoney">
                 <div class="col-lg-12">
                   <h3 class="number">03</h3>
                 </div>
@@ -292,8 +324,12 @@
                 </div>
               </a>
             </li>
-            <li class="menu-product">
-              <a data-toggle="pill" href="#menu3">
+            <li
+              class="menu-product"
+              @mouseover="hover3 = true"
+              @mouseleave="hover3 = false"
+            >
+              <a class="evoucher">
                 <div class="col-lg-12">
                   <h3 class="number">04</h3>
                 </div>
@@ -301,7 +337,7 @@
                   <div class="underline-space"></div>
                 </div>
                 <div class="col-lg-12">
-                  <h3 class="title-card">E-Voucher</h3>
+                  <h3 class="title-card">E-Vouchers</h3>
                 </div>
                 <div class="col-lg-12">
                   <p>
@@ -312,8 +348,12 @@
                 </div>
               </a>
             </li>
-            <li class="menu-product">
-              <a data-toggle="pill" href="#menu4">
+            <li
+              class="menu-product"
+              @mouseover="hover4 = true"
+              @mouseleave="hover4 = false"
+            >
+              <a class="gift-card">
                 <div class="col-lg-12">
                   <h3 class="number">05</h3>
                 </div>
@@ -594,7 +634,9 @@
             <p class="partner-header">
               Kami bekerja sama dengan Mitra dan Provider yang luar biasa.
             </p>
-            <button class="work-with-us">Mari Bermitra</button>
+            <button class="work-with-us" @click="linktoemail()">
+              Mari Bermitra
+            </button>
           </div>
           <div class="col-lg-6">
             <p class="text-partner">Mitra</p>
@@ -1095,6 +1137,11 @@ export default {
   },
   data() {
     return {
+      hover: false,
+      hover1: false,
+      hover2: false,
+      hover3: false,
+      hover4: false,
       id: null,
       defaultOptions: {
         animationData: animationData.default,
